@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 
@@ -8,7 +9,8 @@ import { ConfigService } from '@nestjs/config';
 export class AppService {
   constructor(private readonly configService: ConfigService) {}
   getUser(): string {
-    return `getUser process.env.SECRET: ${process.env.SECRET} // getUser this.configService.get('SECRET'): ${this.configService.get('SECRET')}`;
+    return `getUser process.env.SECRET: ${process.env.SECRET} 
+            // getUser this.configService.get('SECRET'): ${this.configService.get('SECRET')}`;
   }
 
   postUser(): string {
